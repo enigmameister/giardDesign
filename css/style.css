@@ -1,0 +1,125 @@
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+* {
+  border: 0;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+}
+.bg-header {
+  background-color: white !important;
+}
+nav {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+.navbar-nav.custom-spacing .nav-item {
+  margin-right: 20px;
+}
+.input-group.fade {
+  display: none;
+}
+.input-group.show {
+  display: block;
+}
+.search-icon {
+  cursor: pointer;
+}
+.input-group {
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+.input-group.show {
+  width: 25vw;
+  position: absolute;
+  right: 480px;
+  top: 10px;
+  list-style: none;
+}
+.bg-leftSlider {
+  background-color: beige;
+}
+.bg-rightSlider {
+  background-color: #083a0f;
+  padding: 0 !important;
+}
+.custom-row {
+  height: 65vh;
+}
+.custom-col {
+  height: 100%;
+}
+.custom-content {
+  height: 100%;
+}
+.slider {
+  display: flex;
+  align-items: center;
+}
+.slider i {
+  font-size: 24px;
+  cursor: pointer;
+  padding: 24px;
+  background: whitesmoke;
+}
+.text-center {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  width: 70%;
+}
+.text-center p:nth-child(1) {
+  font-size: 60px;
+  text-align: left;
+}
+.text-center p:nth-child(2) {
+  text-align: left;
+  font-size: 16px;
+}
+.btn.btn-leftSlider_contact,
+.btn.btn-leftSlider_more {
+  position: relative;
+  border-radius: 25px;
+  padding: 14px;
+}
+.btn.btn-leftSlider_contact {
+  background-color: #063a06;
+  color: white;
+  border: none;
+}
+.btn.btn-leftSlider_more {
+  background-color: transparent;
+  color: #063a06;
+  border: 1px solid #063a06;
+}
+.btn.btn-leftSlider_contact::before,
+.btn.btn-leftSlider_more::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  bottom: 5px;
+  width: 80%;
+  height: 2px;
+  background-color: whitesmoke;
+  transform-origin: bottom right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-out;
+}
+.btn.btn-leftSlider_more::before {
+  background-color: #063a06;
+}
+.btn.btn-leftSlider_contact:hover::before,
+.btn.btn-leftSlider_more:hover::before {
+  transform-origin: bottom left;
+  transform: scaleX(1);
+}
+.btn.btn-leftSlider_contact:hover {
+  border: 1px solid #063a06;
+  background-color: #063a06;
+  color: white;
+  padding: 14px;
+}
+.btn.btn-leftSlider_more:hover {
+  border: none;
+}
