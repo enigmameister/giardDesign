@@ -1,4 +1,18 @@
 @import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+@font-face // Font
+{
+  font-family: 'Inter';
+  src: url('../fonts/Inter/Inter-VariableFont_slnt\,wght.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// Variables
+
+@greenColor: rgb(27, 91, 49); // text color
+@font: 'Inter';  // font 
+
 *
 {
 	border: 0;
@@ -7,174 +21,222 @@
 	padding: 0;
 }
 
-.bg-header
+.input-group
 {
-  background-color: white !important;
-}
-nav
-{
-  width : 80%;
-  margin: 0 auto;
-  display: flex;
-}
-
-.navbar-nav.custom-spacing .nav-item 
-{
-  margin-right: 20px;
-}
-
-.input-group.fade
- {
-  display: none;
-}
-
-.input-group.show
- {
-  display: block;
-}
-
-.search-icon 
-{
-  cursor: pointer;
-}
-
-.input-group 
-{
-  position: absolute;
-  top: 100%;
-  right: 0;
+ display: inline-flex;
+ left: -100%;
+ transition: 0.5s;
 }
 
 .input-group.show
 {
-  width: 25vw;
-  position: absolute;
-  right: 480px;
-  top: 10px;
-  list-style: none;
+ display: inline-flex;
+ left: 0%;
+ transition: 0.5s;
 }
 
-@custom-row-height: 65vh;
-
-.bg-leftSlider
+.bg-alt
 {
-  background-color: beige;
+  background-color: #dcc1ab;
 }
 
 .bg-rightSlider
 {
-  background-color: rgb(8, 58, 15);
+  background-image: url('../img/slider.png');
+  background-size: cover;
   padding: 0 !important;
-}
-
-.custom-row
- {
-  height: @custom-row-height;
-}
-
-.custom-col
- {
-  height: 100%; // Wysokość dostosowana do rzędu
-}
-
-.custom-content 
-{
-  height: 100%; // Wysokość dostosowana do rzędu
 }
 
 .slider 
 {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 
 .slider i 
 {
-  font-size: 24px;
+  background: whitesmoke;
   cursor: pointer;
   padding: 24px;
-  background: whitesmoke;
 }
 
-
-.text-center
+.leftSliderText
 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  width: 70%;
+  font-family: @font;
 }
-
-.text-center p:nth-child(1)
-{
-  font-size: 60px;
-  text-align: left;
-}
-
-.text-center p:nth-child(2)
-{
-  text-align: left;
-  font-size: 16px;
-}
-
 
 .btn.btn-leftSlider_contact,
 .btn.btn-leftSlider_more 
 {
   position: relative;
-  border-radius: 25px;
-  padding: 14px;
 }
 
 .btn.btn-leftSlider_contact 
 {
-  background-color: rgb(6, 58, 6);
+  background-color: @greenColor;
   color: white;
-  border: none;
 }
 
 .btn.btn-leftSlider_more 
 {
   background-color: transparent;
-  color: rgb(6, 58, 6);
-  border: 1px solid rgb(6, 58, 6);
+  border: 1px solid @greenColor;
+  color: @greenColor;
 }
 
 .btn.btn-leftSlider_contact::before,
 .btn.btn-leftSlider_more::before 
 {
-  content: "";
-  position: absolute;
-  left: 10%;
-  bottom: 5px; 
-  width: 80%;
-  height: 2px; 
   background-color: whitesmoke; 
-  transform-origin: bottom right;
+  bottom: 5px; 
+  content: "";
+  height: 2px; 
+  left: 10%;
+  position: absolute;
   transform: scaleX(0);
+  transform-origin: bottom right;
   transition: transform 0.3s ease-out;
+  width: 80%;
 }
 
 .btn.btn-leftSlider_more::before 
 {
-  background-color: rgb(6, 58, 6);
+  background-color: @greenColor;
 }
+
 .btn.btn-leftSlider_contact:hover::before,
 .btn.btn-leftSlider_more:hover::before 
 {
-  transform-origin: bottom left;
   transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 .btn.btn-leftSlider_contact:hover
 {
-  border: 1px solid rgb(6, 58, 6);
-  background-color: rgb(6, 58, 6);
+  background-color: @greenColor;
+  border: 1px solid @greenColor;
   color: white;
-  padding: 14px;
 }
 
 .btn.btn-leftSlider_more:hover
 {
-  border: none;
+  border: 1px solid @greenColor;
+}
+
+.bg-offer
+{
+  background-color: rgb(245, 240, 236);
+}
+
+.smallHeader
+{
+  font-size: 10px;
+}
+
+.bg-offerSquare
+{
+  background-color: rgb(245, 240, 236);
+}
+
+.bg-aboutRight
+{
+  background-color: @greenColor;
+}
+
+.bg-aboutLeft
+{
+  background-image: url('../img/about.png');
+  background-size:cover;
+}
+
+.btn.btn-about
+{
+  border: 1px solid white; 
+  color: white;
+  font-family: @font;
+}
+
+.btn.btn-about:hover
+{
+  background-color: white;
+  border: 1px solid white;
+  color: @greenColor;
+  transition: 1s;
+}
+
+.bg-instagram
+{
+  background: @greenColor;
+  font-family: @font;
+  margin: 10% auto;
+}
+
+.btn.btn-instagram
+{
+  background-color: white;
+  color: @greenColor;
+}
+
+.btn.btn-instagram:hover
+{
+  background-color: @greenColor;
+  border: 1px dashed white;
+  transition: 1.0s;
+  color: white;
+}
+
+.grid-item
+{
+  border-radius: 25px;
+  margin-bottom: 20px;
+
+  img
+  {
+    width: 200px;
+    height: 200px;  
+  }
+ 
+}
+
+button.btn-gallery 
+{
+  border: 1px solid black;
+}
+
+footer 
+{
+  background-color: #111111;
+}
+
+.btn.footer
+{
+  background-color: @greenColor;
+}
+
+.btn.footer:hover
+{
+  background-color: #111111;
+  border: 1px dashed @greenColor;
+  transition: 0.5s;
+}
+
+@media screen and (min-width: 991px) // Desktop
+{
+  .navbar-brand:hover
+{
+  background-color: @greenColor;
+  border-radius: 10px 0px 10px 0px;
+  color: white !important;
+  padding: 5px;
+  transition: 0.5s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover:not(.search-icon)
+{
+  background-color: @greenColor;
+  border-radius: 15px 0px 15px 0px;
+  color: white;
+  transition: 1s;
+}
+
 }

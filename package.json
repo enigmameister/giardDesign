@@ -1,7 +1,24 @@
 {
+  "type":"module",
+  
   "dependencies": {
     "bootstrap": "^5.3.1",
     "bootstrap-icons": "^1.10.5",
-    "less": "^4.2.0"
-  }
+    "less": "^4.2.0",
+    "macy": "^2.5.1",
+    "masonry-layout": "^4.2.2"
+  },
+  "devDependencies": {
+    "@types/masonry-layout": "^4.2.5",
+    "parcel": "^1.12.4"
+  },
+  "name": "giarddesign",
+  "description": "Zadanie rekrutacyjne adRespect",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
