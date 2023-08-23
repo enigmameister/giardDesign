@@ -1,3 +1,5 @@
+import Masonry from "masonry-layout";
+
 document.addEventListener("DOMContentLoaded", function ()
 {
     const searchBar = document.getElementsByClassName("input-group")[0];
@@ -35,4 +37,15 @@ document.addEventListener("DOMContentLoaded", function ()
     });
   });
 
+/*
+window.onload = () => {
+    const grid = document.querySelector('.grid');
 
+    const masonry = new Masonry(grid,{
+      itemSelector: '.grid-item',
+      gutter: 10,
+      originLeft: false,
+      originTop: false,
+    });
+  };
+*/
